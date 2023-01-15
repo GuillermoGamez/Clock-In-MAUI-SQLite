@@ -7,9 +7,9 @@
     Shell.FlyoutBehavior="Disabled">
 
     <ShellContent
-        Title="Home"
-        ContentTemplate="{DataTemplate local:MainPage}"
-        Route="MainPage" />
+        Title="ClockIn"
+        ContentTemplate="{DataTemplate local:View.ClockInOutView}"
+        Route="ClockInOutView" />
 
 </Shell>
 

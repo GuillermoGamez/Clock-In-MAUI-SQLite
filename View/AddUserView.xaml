@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:viewmodel="clr-namespace:Clock_In_System_with_MAUI_and_SQLite.ViewModel"
+             x:Class="Clock_In_System_with_MAUI_and_SQLite.View.AddUserView"
+             x:DataType="viewmodel:AddUserViewModel"
+             Title="Add a New User">
+
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Add" Command="{Binding AddUserCommand}"/>
+    </ContentPage.ToolbarItems>
+
+    <StackLayout Orientation="Vertical"
+                 Padding="10"
+                 Spacing="10">
+
+        <Grid ColumnDefinitions="*, 50, *">
+            <Label Grid.Column="0"
+                   Text="User Name: "
+                   FontSize="18"
+                   HorizontalOptions="End"/>
+
+            <Entry Grid.Column="2"
+                   Text="{Binding NewUser.UserName}"
+                   FontSize="18"/>
+        </Grid>
+
+        <Grid ColumnDefinitions="*, 50, *">
+            <Label Grid.Column="0"
+                   Text="First Name: "
+                   FontSize="18"
+                   HorizontalOptions="End"/>
+
+            <Entry Grid.Column="2"
+                   Text="{Binding NewUser.FirstName}"
+                   FontSize="18"/>
+        </Grid>
+
+        <Grid ColumnDefinitions="*, 50, *">
+            <Label Grid.Column="0"
+                   Text="Last Name: "
+                   FontSize="18"
+                   HorizontalOptions="End"/>
+
+            <Entry Grid.Column="2"
+                   Text="{Binding NewUser.LastName}"
+                   FontSize="18"/>
+        </Grid>
+
+    </StackLayout>
+</ContentPage>

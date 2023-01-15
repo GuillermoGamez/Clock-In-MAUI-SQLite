@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:viewmodel="clr-namespace:Clock_In_System_with_MAUI_and_SQLite.ViewModel"
+             x:Class="Clock_In_System_with_MAUI_and_SQLite.View.ClockInOutView"
+             x:DataType="viewmodel:ClockInOutViewModel"
+             Title="Clock In">
+
+    <StackLayout Orientation="Vertical"
+                 Spacing="50"
+                 Padding="50">
+
+        <Label Text="Clock In System"
+               FontSize="18"
+               HorizontalOptions="Center"/>
+
+
+        <Grid ColumnDefinitions="*, 50, *">
+            <Label Grid.Column="0"
+                   Text="User Name: "
+                   FontSize="18"
+                   HorizontalOptions="End"/>
+
+            <Entry Grid.Column="2"
+                   Text="{Binding UserName}"
+                   FontSize="18"/>
+        </Grid>
+
+        <Grid ColumnDefinitions="*, 0.5*, 0.25*, 0.5*, *">
+            <Button Grid.Column="1"
+                    Text="Clock In/Out"
+                    FontSize="18"
+                    Command="{Binding ClockInOutCommand}"/>
+
+            <Button Grid.Column="3"
+                    Text="Add User"
+                    FontSize="18"
+                    Command="{Binding GoToAddUserCommand}"/>
+        </Grid>
+
+    </StackLayout>
+
+</ContentPage>
